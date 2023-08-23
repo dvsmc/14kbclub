@@ -1,0 +1,60 @@
+name: Parcel Publish
+
+on:
+  push:
+    branches:
+      - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Yarn install
+        uses: borales/actions-yarn@v4
+        with:
+            cmd: install
+      - name: Yarn build
+        uses: borales/actions-yarn@v4
+        with:
+            cmd: build
+      - name: Build and tag action
+        uses: JasonEtco/build-and-tag-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./dist
+      - name: Deploy pages
+        uses: actions/deploy-pages@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+      - name: Push to gh-pages branch
+        run: |
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git commit -a -m "Add changes"
