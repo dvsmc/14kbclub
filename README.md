@@ -4,6 +4,12 @@
 
 To submit website, open a pull request with additions to index.html file.
 
+Please read the [Rules](https://14kbclub.com/#rules) and how to [Submit](https://14kbclub.com/#submit) first!
+
+Build status:
+
+![badge.svg](https://github.com/dvsmc/14kbclub/actions/workflows/parcel.yml/badge.svg)
+
 # Author
 
 [dvsmc](https://github.com/dvsmc)
