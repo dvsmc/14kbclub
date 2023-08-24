@@ -32,7 +32,7 @@
             <section id="members">
 
               <p>The "14KB Club" website is a curated list of websites whose home page initial load does not exceed 14 KB uncompressed size.</p>
-              <p><b>Why exactly 14 kilobytes?</b> The maximum size of a single TCP packet is typically 1500 bytes (<a href="https://en.wikipedia.org/wiki/Maximum_transmission_unit">read more</a>), and subtracting the header overhead (40 bytes), leaves us with 1460 bytes, and with 10 packets that equals to roughly 14 kilobytes. This allows the initial web page to be transmitted without waiting for acknowledgments, minimizing round trips that leads to faster page load time.</p>
+              <p><b>Why exactly 14 kilobytes?</b> The maximum size of a single TCP packet is typically 1500 bytes (<a href="https://en.wikipedia.org/wiki/Maximum_transmission_unit">Maximum transmission unit</a>), and subtracting the header overhead (40 bytes), leaves us with 1460 bytes, and with 10 packets that equals to roughly 14 kilobytes. This allows the initial web page to be transmitted without waiting for acknowledgments, minimizing round trips that leads to faster page load time.</p>
               <p>You may notice this website itself follows this rule and loads under 14 kilobytes of data and does not load any additional files.</p>
 
               <br/>
@@ -49,7 +49,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td><a href="https://10kbclub.com/">10kbclub.com</a></td><td>7.8kb</td></tr>
+                  <tr><td><a href="https://14kbclub.com/">14kbclub.com</a></td><td>7.2kb</td></tr>
                 </tbody>
               </table>
 
@@ -58,7 +58,7 @@
               <br/>
 
               <footer>
-                <p>Website inspired by <a href="https://10kbclub.com/">10kbclub.com</a> and others, theme by <a href="https://github.com/cadars/john-doe">cadars/john-doe</a></p>
+                <p>Website created by <a href="https://github.com/dvsmc">dvsmc</a>, as inspired by <a href="https://10kbclub.com/">10kbclub.com</a> and similar, theme by <a href="https://github.com/cadars/john-doe">cadars/john-doe</a>.</p>
               </footer>
                   
             </section>
@@ -89,11 +89,13 @@
               
                 <p>First please read the <a href="#rules">rules</a> and then you can submit your own website.</p>
 
+                <p>To check actualy byte size of your website, you can use tool like <a href="https://www.rankwatch.com/free-tools/website-page-size-checker">Website Page Size Checker Tool</a></p>
+
                 <p>Please note if your website exceeds 14kb, you might consider <a href="https://250kb.club/">250kb.club</a> or <a href="https://512kb.club/">512kB.club</a> or even <a href="https://1mb.club/">1mb.club</a>.</p>
 
                 <p><b>Easiest</b> way for your website to appear on site is to <a href="https://github.com/dvsmc/14kbclub/issues/new">open a new issue</a> in the <a href="https://github.com/dvsmc/14kbclub">dvsmc/14kbclub</a> GitHub repository and complete the issue template.</p>
 
-                <p><b>Fastest</b> way for your website to appear in site is to <a href="https://github.com/dvsmc/14kbclub/fork">fork</a> the <a href="https://github.com/dvsmc/14kbclub">dvsmc/14kbclub</a> GitHub repository, add your website to <a href="https://github.com/dvsmc/14kbclub/blob/main/index.html#L52">index.html</a> as last table row and submit a <a href="https://github.com/dvsmc/14kbclub/compare">pull request</a>.</p>
+                <p><b>Fastest</b> way for your website to appear in site is to <a href="https://github.com/dvsmc/14kbclub/fork">fork</a> the <a href="https://github.com/dvsmc/14kbclub">dvsmc/14kbclub</a> GitHub repository, add your website to <a href="https://github.com/dvsmc/14kbclub/blob/main/index.html#L52">index.html</a> as table row in order of size (smallest on top) a <a href="https://github.com/dvsmc/14kbclub/compare">pull request</a>.</p>
 
                 <p>If at some point maintenance of this website is slow, not going in right direction, feel free to open an issue on the GitHub project itself and we'll see where it goes.</p>
             
