@@ -8,14 +8,14 @@
     },
     "homepage": "https://github.com/dvsmc/14kbclub",
     "keywords": [
-        "gatsby"
+        "js", "club", "website", "14kb"
     ],
     "license": "MIT",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/dvsmc/14kbclub.git"
     },
-    "main": "./index.html",
+    "default": "./index.html",
     "source": "./index.html",
     "browserslist": "> 0.1%, last 4 versions, not dead",
     "scripts": {
