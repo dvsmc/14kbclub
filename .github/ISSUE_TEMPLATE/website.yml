@@ -1,0 +1,35 @@
+name: New Website
+description: Add new website
+title: "[New Website]: "
+labels: ["new", "website"]
+assignees:
+  - dvsmc
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for adding a new website! Make sure its size is under 14 kilobytes, working and up to date!
+  - type: input
+    id: url
+    attributes:
+      label: Full website url
+      description: Enter full website url which will be used in the list
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: input
+    id: size
+    attributes:
+      label: Website size
+      description: Enter full website size
+      placeholder: 10.5kb
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Agreement
+      description: By submitting this issue, you agree that you read [Rules](https://14kbclub.com#rules) and will follow them!
+      options:
+        - label: I agree to rules and want to submit my website.
+          required: true

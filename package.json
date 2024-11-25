@@ -1,0 +1,47 @@
+{
+    "name": "14kbclub",
+    "description": "14kbclub.com",
+    "version": "1.0.0",
+    "author": "dvsmc <112554734+dvsmc@users.noreply.github.com>",
+    "bugs": {
+        "url": "https://github.com/dvsmc/14kbclub/issues"
+    },
+    "homepage": "https://github.com/dvsmc/14kbclub",
+    "keywords": [
+        "js", "club", "website", "14kb"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dvsmc/14kbclub.git"
+    },
+    "default": "./index.html",
+    "source": "./index.html",
+    "browserslist": "> 0.1%, last 4 versions, not dead",
+    "scripts": {
+        "start": "parcel",
+        "prebuild": "rimraf dist",
+        "build": "parcel build ./index.html --no-source-maps --public-url ./",
+        "publish": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    },
+    "devDependencies": {
+        "@parcel/compressor-brotli": "^2.9.3",
+        "@parcel/compressor-gzip": "^2.9.3",
+        "@parcel/config-default": "^2.9.3",
+        "@parcel/core": "^2.9.3",
+        "@parcel/namer-default": "^2.9.3",
+        "@parcel/optimizer-cssnano": "^2.9.3",
+        "@parcel/resolver-glob": "^2.9.3",
+        "parcel": "^2.9.3",
+        "parcel-transformer-plaintext": "^1.0.1",
+        "postcss": "^8.0.0",
+        "postcss-custom-properties": "^13.3.0",
+        "postcss-import": "^15.1.0",
+        "postcss-uncss": "^0.17.0",
+        "postcss-url": "^10.1.3",
+        "posthtml-doctype": "^1.1.1",
+        "push-dir": "^0.4.1",
+        "rimraf": "^5.0.1",
+        "uncss": "^0.17.3"
+    }
+}
